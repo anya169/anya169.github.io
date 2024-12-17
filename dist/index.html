@@ -31,9 +31,24 @@
           <a href="#" class="page-header__nav-link">Блог</a>
           <a href="#" class="page-header__nav-link">О нас</a>
           <a href="#" class="page-header__nav-link">Контакты</a>
+
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+            <svg class="page-header__user-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
         </nav>
         <div class="page-header__right-block">
-          <a href="#" class="btn page-header_btn">Войти</a>
+          <a href="#" class="btn page-header_btn">Войти
+            <svg class="page-header__user-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#user"></use>
+            </svg>
+          </a>
+
+          <button type="button" class="page-header__nav-toggle" id="js-navToggle">
+            <div class="page-header__nav-toggle-line"></div>
+          </button>
         </div>
       </div>
     </header>
@@ -60,9 +75,93 @@
         <p class="btn section__value-2">Стать арендатором</p>
       </div>
     </section>
+    <h1 class="center-block__title section-title">О НАС</h1>
+    <div class="aboutus">
+      <div class="aboutus__textblock1">
+        <a class="aboutus__millenials">Проект "Millenials"</a>
+        <a class="aboutus__text1">Вдохновлен молодыми идейными людьми, увлеченными творчеством, эмоциями и желанием сделать мир лучше, проявить себя. У них есть талант и стремление, у нас возможность помочь им воплотить их мечту в реальность.</a>
+      </div>
+      <div class="aboutus__pics">
+        <img src="assets/images/aboutus/concert.jpg" class="aboutus__img1" />
+        <img src="assets/images/aboutus/art.jpg" class="aboutus__img2" />
+      </div>
+      <a class="aboutus__text2">Мы предоставляем площади для вашего мероприятия</a>
+      <div class="aboutus__textblock">
+        <a class="aboutus__text3">И оказываем помощь с организацией, если вам это нужно.</a>
+        <a class="aboutus__text4">Наша цель: вовлечь в культурную жизнь города как можно больше людей, помочь молодым ребятам сделать первые шаги к своей мечте и рассказать всем о том, что их волнует.</a>
+      </div>
+      <div class="aboutus__bottom">
+        <div class="aboutus__pics2">
+          <div class="aboutus__rectangle"></div>
+          <img src="assets/images/aboutus/fair.jpg" class="aboutus__img3" />
+        </div>
+        <div class="aboutus__textblock2">
+          <a class="aboutus__text5">Мы уже успешно организовали и провели более 100 проектов. Посмотрите, как это было классно.</a>
+          <a href="#" class="btn aboutus__btn">Смотреть
+            <svg class="aboutus__see" width="91" height="60">
+              <use xlink:href="assets/icons/symbols.svg#see"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </main>
   <footer class="page-footer">
+    <div class="page-footer__liners">
 
+    </div>
+    <div class="page-footer__wrapper"></div>
+    <div class="page-footer__block">
+      <div class="page-footer__block-links">
+        <a href="#" class="page-footer__block-link">Календарь мероприятий</a>
+        <a href="#" class="page-footer__block-link">Провести мероприятие</a>
+        <a href="#" class="page-footer__block-link">Стать арендатором</a>
+        <a href="#" class="page-footer__block-link">Наши проекты</a>
+        <a href="#" class="page-footer__block-link">Контакты</a>
+      </div>
+      <form class="page-footer__subscribe-form subscribe-form">
+        <h4 class="subscribe-form__title">
+          Подпишись и будь в курсе происходящего
+        </h4>
+        <div class="subscribe-form__wrapper">
+          <div class="subscribe-form__field-wrapper">
+            <input name="email" type="email" placeholder="Email" class="subscribe-form__input field__input" required />
+          </div>
+          <button type="submit" class="subscribe-form__submit btn--footer">Подписаться</button>
+        </div>
+        <label class="subscribe-form__check check">
+          <input type="checkbox" name="agree" class="check__input" required checked />
+          <span class="check__mark"></span>
+          <span class="check__label">Согласен на обработку персональных данных</span>
+        </label>
+      </form>
+    </div>
+    <div class="page-footer__block2">
+      <div class="page-footer__socials">
+        <a href="#" class="page-footer__social">
+          <svg class="socials__icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#vk"></use>
+          </svg>
+        </a>
+        <a href="#" class="page-footer__social">
+          <svg class="socials__icon" width="24" height="24">
+            <use xlink:href="assets/icons/symbols.svg#vk"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="page-footer__links">
+        <a href="#" class="page-footer__link">Политика конфиденциальности</a>
+        <a href="#" class="page-footer__link">Cookies</a>
+      </div>
+      <div class="page-footer__copyright">@ Millenials 2022</div>
+      <div class="page-footer__create">
+        <a href="#" class="page-footer__create-link">Создание и продвижение
+          <svg class="page-footer__create" width="56" height="17">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </footer>
   <div class="pp" id="eventPP">
     <div class="pp__wrapper">

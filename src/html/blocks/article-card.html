@@ -1,21 +1,12 @@
-<section class="listing @@class">
-   <h2 class="listing__title section-title">Блог</h2>
- 
-   <div class="listing__article-list">
-     <!-- prettier-ignore -->
-     @@loop('article-card.html', [
-       {
-         "class": "listing__article-card",
-         "img": "assets/images/blog/theatre.jpg",
-         "alt": "Theatre Photosession",
-         "title": "Фотосессия в стенах Театра драмы",
-         "descr": "Организовывая фотосессию для...",
-         "time": "26.11.2021",
-         "datetime": "2021-11-26T00:00"
-       }
-     ])
-   </div>
- 
-   <a href="#" class="listing__link link">Смотреть все</a>
- </section>
- 
+<article class="article-card @@class">
+  <a href="#" class = article-card__link>
+    <picture class="article-card__picture">
+      <source media="(max-width: 450px)" srcset="@@img"/>
+      <source type="(max-width: 450px)" srcset="@@img_web"/>
+      <source type="image/webp" media="(max-width: 1169px)" srcset="@img_tablet_webp"/>
+      <source media="(max-width: 1169px)" srcset="@@img_tablet"/>
+      <source type="image/webp" srcset="@@img_web"/>
+      <img src="@@img" alt="@@alt" class="article-card__img"
+    </picture>
+  </a>
+</article>

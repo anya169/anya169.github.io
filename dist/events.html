@@ -31,9 +31,24 @@
           <a href="#" class="page-header__nav-link">Блог</a>
           <a href="#" class="page-header__nav-link">О нас</a>
           <a href="#" class="page-header__nav-link">Контакты</a>
+
+          <a href="#" class="page-header__nav-user-link">
+            Александр С.
+            <svg class="page-header__user-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
         </nav>
         <div class="page-header__right-block">
-          <a href="#" class="btn page-header_btn">Войти</a>
+          <a href="#" class="btn page-header_btn">Войти
+            <svg class="page-header__user-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#user"></use>
+            </svg>
+          </a>
+
+          <button type="button" class="page-header__nav-toggle" id="js-navToggle">
+            <div class="page-header__nav-toggle-line"></div>
+          </button>
         </div>
       </div>
     </header>
@@ -261,6 +276,15 @@
           <th class="table__thead-th--btm"></th>
           <th class="table__thead-th--btm"></th>
         </tr>
+        <tfoot class="table__footer">
+          <tr class="table__footer-tr">
+            <th class="table__footer-th"></th>
+            <th class="table__footer-th">Тариф «Light»</th>
+            <th class="table__footer-th">Тариф «Promo»</th>
+            <th class="table__footer-th">Тариф «All stars»</th>
+          </tr>
+        </tfoot>
+
       </thread>
     </table>
     <section class="section section--events">
