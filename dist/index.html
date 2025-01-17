@@ -2,6 +2,7 @@
 <html lang="ru">
 <!DOCTYPE html>
 <html lang="ru">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 
 <head>
   <meta charset="utf-8" />
@@ -28,7 +29,7 @@
         </a>
         <nav class="page-header__nav">
           <a href="events.html" class="page-header__nav-link">Мероприятия</a>
-          <a href="#" class="page-header__nav-link">Блог</a>
+          <a href="blog.html" class="page-header__nav-link">Блог</a>
           <a href="#" class="page-header__nav-link">О нас</a>
           <a href="#" class="page-header__nav-link">Контакты</a>
 
@@ -57,16 +58,14 @@
   </html>
   <main class="main">
     <div class="center-block">
-      <a href="#" class="center-block__logo">
-        <svg class="central-block__logo-icon" width="1920" height="325">
-          <use xlink:href="assets/icons/symbols.svg#central_logo"></use>
-        </svg>
-      </a>
-      <div class="center-block__quote">
-        <p class="center-block__quote_element-1">АРТ-ПРОСТРАНСТВО</p>
-        <p class="center-block__quote_element-2">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ </br>
-          МЕСТО ДЛЯ НАСТОЯЩЕГО</p>
-      </div>
+      <p class="center-block__element-1">АРТ-ПРОСТРАНСТВО</p>
+      <picture class="center-block__logo">
+        <img src="assets/images/central_logo.svg" alt="logo" class="center-block__img">
+      </picture>
+      <p class="center-block__element-2">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ
+        <br />
+        МЕСТО ДЛЯ НАСТОЯЩЕГО
+      </p>
     </div>
     <section class="section">
       <p class="section__center">Я ХОЧУ:</p>
@@ -105,6 +104,52 @@
         </div>
       </div>
     </div>
+    <div class="contacts">
+      <h1 class="listing__title section-title">КОНТАКТЫ</h1>
+      <div class="contacts__container">
+        <div class="contacts__items">
+          <div class="contacts__item contacts-item">
+            <div class="contacts-item__wrap-icon">
+              <svg class="contacts-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#ellipse"></use>
+              </svg>
+            </div>
+            <div class="contacts-item__info">
+              <h4 class="contacts-item__title">Томск, Белая 8</h4>
+              <div class="contacts-item__text">2 этаж</div>
+              <div class="contacts-item__text">оф. 207-208</div>
+            </div>
+          </div>
+          <div class="contacts__item contacts-item">
+            <div class="contacts-item__wrap-icon">
+              <svg class="contacts-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#home"></use>
+              </svg>
+            </div>
+            <div class="contacts-item__info">
+              <h4 class="contacts-item__title">Отдел аренды</h4>
+              <div href="tel:74993500730" class="contacts-item__text">+7 499 350 07 30</div>
+              <div href="mailto:hi@tagree.ru" class="contacts-item__text">hi@tagree.ru</div>
+            </div>
+          </div>
+          <div class="contacts__item contacts-item">
+            <div class="contacts-item__wrap-icon">
+              <svg class="contacts-item__icon" width="24" height="24">
+                <use xlink:href="assets/icons/symbols.svg#star"></use>
+              </svg>
+            </div>
+            <div class="contacts-item__info">
+              <h4 class="contacts-item__title">Отдел мероприятий</h4>
+              <div href="tel:74993500730" class="contacts-item__text">+7 499 350 07 30</div>
+              <div href="mailto:hi@tagree.ru" class="contacts-item__text">hi@tagree.ru</div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <img src="assets/images/map.jpg" alt="">
+        </div>
+      </div>
+    </div>
     <div class="doit">
       <p class="doit__text">
         <span class="doit__word">
@@ -118,8 +163,9 @@
           а мы вам поможем
         </span>
       </p>
-    </div>, {"class": "home__doit"})
+    </div>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__liners">
 

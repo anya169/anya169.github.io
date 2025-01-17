@@ -6,7 +6,7 @@
       <main class = "main">
          <div class="events">
             <section class="listing events__listing">
-              <h2 class="listing__title section-title">Мероприятия</h2>
+              <h1 class="listing__title section-title">Мероприятия</h1>
           
               <div class="listing__events-list">
                 <!-- prettier-ignore -->
@@ -75,9 +75,8 @@
           <svg class="listing__frame-icon" width="60" height="91">
             <use xlink:href="assets/icons/symbols.svg#frame"></use>
           </svg>
-          <h3 class="listing__title section-title section-title--22px">Дополнительные услуги</h2>
-          <p class = "listing__table">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>
-          </div>   
+          <h3 class="listing__title section-title section-title--22px">Дополнительные услуги</h3>
+          <p class = "listing__table">Перед запуском проекта, мы подготавливаем подробную смету и согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы можем приступать к реализациии проекта, начинается сложная, но интересная работа, результатом которой будет проведение вашего мероприятия на высшем уровне.</p>   
           @@include('blocks/table.html', {"class": "events__tariffs-table"})  
           <section class = "section section--events">
             <p class = "section__center">Я ХОЧУ:</p>
@@ -85,11 +84,10 @@
                <p class = "btn section__value-1">Провести мероприятие</p>
                <p class = "btn section__value-2">Стать арендатором</p>
             </div>   
-         </section>     
+         </section>    
+         @@include('blocks/info.html') 
    </div>    
-      <footer class = "page-footer">
-
-      </footer>
+      @@include('blocks/page-footer.html')
       @@include('blocks/event-pp.html')
    </body>
 </html>
