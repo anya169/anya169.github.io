@@ -12,10 +12,13 @@
    &__items{
       display: flex;
       flex-direction: column;
-      gap: 57px;
+      gap: 67px;
       &--row{
          flex-direction: row;
-         gap: 50px;
+         gap: 67px;
+         @media @bw1340 {
+            gap: 29px;
+         }
       }
    }
 }

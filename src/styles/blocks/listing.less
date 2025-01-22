@@ -43,10 +43,26 @@
       padding-right: 40px;
       flex-wrap: wrap;
       gap: 40px;
+      @media @bw768 {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
    }
    &__blog-card{
       display: flex;
       width: 1334px;
+      @media @bw1440 {
+         width: 1257px;
+      }
+      @media @bw1340 {
+         width: 708px;
+      }
+      @media @bw768 {
+         width: 527px;
+      }
+      @media @bw320 {
+         width: 280px;
+      }
    }
    &__title{
       margin-top: 120px;
