@@ -1,6 +1,6 @@
 @font-face {
   font-family: "mak";
-  src: local("MAK-bold"), url("../assets/fonts/.woff") format("woff");
+  src: local("MAK-bold"), url("../assets/fonts/MAK-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -116,25 +116,6 @@ img {
   padding-left: 1518px;
   padding-top: 15px;
   padding-bottom: 95px;
-}
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-li {
-  content: "\2022";
-  /* Символ кружка (пули) */
-  position: absolute;
-  left: 0.2em;
-  top: 0.4em;
-  /* Подстройте вертикальное положение */
-  padding-left: 1.5em;
-  /* Отступ для текста, чтобы не перекрывался с точкой */
-  position: relative;
-  /* Важно для позиционирования псевдоэлемента */
-}
-li::before {
-  color: #a51505;
 }
 .container {
   -webkit-box-sizing: border-box;
@@ -1638,7 +1619,7 @@ li::before {
   grid-template-areas: "pics2 textblock2";
 }
 .doit {
-  font-family: "Mak", serif;
+  font-family: "mak", serif;
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1897,17 +1878,18 @@ li::before {
           transform: rotate(270deg);
 }
 .event__href {
+  margin-left: 280px;
   margin-top: 40px;
-  margin-left: 290px;
 }
 .event__title {
+  margin-left: 0px;
   justify-self: center;
   font-family: "Lora", serif;
   font-size: 70px;
   font-weight: 500;
 }
 .event__headline {
-  margin-top: 80px;
+  margin-left: 0px;
   margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1975,9 +1957,32 @@ li::before {
   background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0) 82.86%);
 }
 .event__dateplace-info {
-  font-family: "Mak", serif;
+  font-family: "mak", serif;
   font-size: 30px;
   font-weight: 300;
+}
+.event__program-list {
+  margin-left: 280px;
+}
+.event__info-title,
+.event__program-title {
+  margin-left: 280px;
+  font-size: 18px;
+  margin-top: 75px;
+}
+.event__program-point {
+  margin-bottom: 16px;
+}
+.event__program-point::marker {
+  color: #a51505;
+}
+.event__info {
+  margin-left: 280px;
+  width: 870px;
+}
+.event__music-list {
+  margin-left: 264px;
+  margin-top: 50px;
 }
 @media (max-width: 1659px) {
   body {
