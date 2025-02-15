@@ -16,22 +16,19 @@
       display: flex;
       justify-self: center;
       flex-direction: row;
-      width: 942px;
-      justify-content: space-between;
+      gap: 60px;
    }
    &__headline-img{
       width: 497px;
    }
    &__dateplace{
       align-self: center;
-      width: 150px;
-      height: 92px;
       display: flex;
       flex-direction: column;
+      gap: 12px;
    }
    &__dateplace-liner{
       display: flex;
-      height: 50px;
       &::before{
          content: '';
          flex-grow: 1;
@@ -45,7 +42,6 @@
 
    &__dateplace-liner1{
       display: flex;
-      height: 50px;
       &::before{
          content: '';
          flex-grow: 1;
@@ -61,6 +57,11 @@
       font-family: @font3;
       font-size: 30px;
       font-weight: 300;
+      &--16px{
+         font-family: @font3;
+         font-weight: 700;
+         font-size: 16px;
+      }
    }
    &__program-list{
       margin-left: 280px;
@@ -84,5 +85,91 @@
    &__music-list{
       margin-left: 264px;
       margin-top: 50px;
+   }
+   &__reserving{
+      display: flex;
+      flex-direction: row;
+      gap: 335px;
+      margin-bottom: 70px;
+   }
+   &__reserving-numbers{
+      margin-left: 280px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+   &__reserving-check{
+      &--red{
+         color: @red_dark;
+      }
+      &--gray{
+         color: gray;
+      }
+   }
+   &__tables{
+      width: 780px;
+      height: 400px;
+      display: grid;
+      gap: 50px;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: 34px 141px 121px 121px;
+      grid-template-areas:
+        ". . stage . ."
+        "ten nine dance one two"
+        "eleven eight seven four three"
+        ". six . five .";
+   }
+   &__tables-table1{
+      grid-area: one;
+   }
+   &__tables-table2{
+      grid-area: two;
+   }
+   &__tables-table3{
+      grid-area: three;
+   }
+   &__tables-table4{
+      grid-area: four;
+   }
+   &__tables-table5{
+      grid-area: five;
+   }
+   &__tables-table6{
+      grid-area: six;
+   }
+   &__tables-table7{
+      grid-area: seven;
+   }
+   &__tables-table8{
+      grid-area: eight;
+   }
+   &__tables-table9{
+      grid-area: nine;
+   }
+   &__tables-table10{
+      grid-area: ten;
+   }
+   &__tables-table11{
+      grid-area: eleven;
+   }
+   &__tables-dance{
+      grid-area: dance;
+      padding-left: 8px;
+   }
+   &__tables-stage{
+      width: 162px;
+      height: 34px;
+      background-color: @black;
+      color: @white;
+      font-family: @font1;
+      font-weight: 600;
+      display: flex;
+      justify-content: center; 
+      align-items: center;   
+      box-sizing: border-box; 
+      grid-area: stage;
+   }
+   &__tickets{
+      margin-left: 280px;
    }
 }

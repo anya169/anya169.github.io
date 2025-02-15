@@ -111,7 +111,8 @@ function jsCopy() {
 function copy() {
   return gulp
     .src(resources.static, {
-      base: "src"
+      base: "src",
+      encoding: false
     })
     .pipe(gulp.dest("dist/"));
 }
@@ -146,6 +147,16 @@ function svgSprite() {
     )
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("dist/assets/icons"));
+}
+
+function injectSvg() {
+  const svg = fs.readFileSync('dist/assets/icons/symbols.svg', 'utf8'); // Читаем SVG
+  return gulp
+    .src(resources.html) // Берем HTML файл
+    .pipe(inject.transform.htmlContent(function(contents) {
+      return contents.replace('<!-- inject:svg -->', svg); // Вставляем SVG
+    }))
+    .pipe(gulp.dest('dist')); // Сохраняем измененный HTML
 }
 
 const build = gulp.series(
@@ -190,5 +201,6 @@ export {
   svgSprite,
   build,
   serve,
-  start
+  start,
+  injectSvg
 };
