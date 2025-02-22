@@ -8,14 +8,14 @@
             <div class = "event__href">Главная / Мероприятия / Вечер | The Best of Sade</div>
             <h1 class="event__title">Вечер | The Best of Sade</h1>
             <div class="event__headline">
-               <div class="event__dateplace">
+               <div class="event__dateplace1">
                   <div class="event__dateplace-liner"></div>
                   <div class="event__dateplace-info">16/12/2024</div>
                   <div class="event__dateplace-info--16px">КАФЕ <<ПТИЧКА>>"</div>
                   <div class="event__dateplace-liner"></div>
                </div>
                <img src="assets/images/events/sade.jpg" class="event__headline-img"/>
-               <div class="event__dateplace">
+               <div class="event__dateplace2">
                   <div class="event__dateplace-liner1"></div>
                   <div class="event__dateplace-info">20.00 начало</div>
                   <div class="event__dateplace-info--16px">ЛЕНИНА 10 | 2 ЭТАЖ</div>
@@ -220,14 +220,25 @@
                <circle fill="#BFBFBF" id="Ellipse5-6" cx="48.000000" cy="109.000000" r="12.000000" stroke="#BFBFBF" fill-opacity="1.000000"/>
             </svg>                
          </div>
+         <div class="event__tickets">
+            <h4 class="event__tickets-title title">Ваши пригласительные билеты</h4>
+            <div class="event__redCostDetails" id="redCostDetails"></div>
+            <div class="event__blackCostDetails" id="blackCostDetails"></div>
+            <div class="event__totalCost" id="totalCost"></div>
+            <p class = "event_button btn--tickets btn">Купить билеты</p>
+         </div>
+         <div class="event__cost">
+            <h5 class="event__cost-title title">Стоимость пригласительного билета</h5>
+            <div class="event__cost-red">1400 ₽ | 1 персона</div>
+            <div class="event__cost-black">1250 ₽ | 1 персона</div>
+            <h6 class="event__cost-title title">Примечания</h6>
+            <div class="event__cost-circles">
+               <div class="event__cost-blackcircle1"></div>
+               <div class="event__cost-redcircle">доступные места</div>
+            </div>
+            <div class="event__cost-graycircle">забронировано</div>
+         </div>
       </div>
-      <div class="event__tickets">
-         <h4 class="event__tickets-title title">Ваши пригласительные билеты</h4>
-         <div class="event__redCostDetails" id="redCostDetails"></div>
-         <div class="event__blackCostDetails" id="blackCostDetails"></div>
-         <div class="event__totalCost" id="totalCost"></div>
-      </div>
-      
    </div>
       </main>    
       @@include('blocks/page-footer.html')

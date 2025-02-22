@@ -654,7 +654,7 @@
         let detailsHTMLred = '';
     
         if (redCount > 0) {
-          redDetail = `<p>${redCount} шт. | 1400 P  ${redCount * 1400} ₽</p>`
+          redDetail = `<p>${redCount} шт. | 1400 ₽ <span style="margin-left: 222px;"></span> ${redCount * 1400} ₽</p>`
           detailsHTMLred += redDetail;
         }
       
@@ -671,7 +671,7 @@
         let detailsHTMLblack = '';
 
         if (blackCount > 0) {
-          blackDetail = `<p>${blackCount} шт. | 1250 P ${blackCount * 1250} ₽</p>`
+          blackDetail = `<p>${blackCount} шт. | 1250 P <span style="margin-left: 222px;"></span> ${blackCount * 1250} ₽</p>`
           detailsHTMLblack += blackDetail;
         }
         
@@ -682,14 +682,14 @@
       checkbox.addEventListener('change', function() {
         const results = calculate();
         const total = results.totalCost;
-        totalCostElement.innerHTML = `Общая стоимость: ${total} ₽`;
+        totalCostElement.innerHTML = `Сумма <span style="margin-left: 35px;"></span> ${total} ₽`;
       });
     });
     blackCheckboxes.forEach(checkbox => {
       checkbox.addEventListener('change', function() {
         const results = calculate();
         const total = results.totalCost;
-        totalCostElement.innerHTML = `Общая стоимость: ${total} ₽`;
+        totalCostElement.innerHTML = `Сумма <span style="margin-left: 35px;"></span> ${total} ₽`;
       });
     });
     

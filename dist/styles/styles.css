@@ -400,6 +400,17 @@ img {
   padding: 15px 23px;
   font-weight: 400;
 }
+.btn--tickets {
+  width: 405px;
+  height: 52px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #bc3324;
+  color: #ffffff;
+  padding: 15px 23px;
+  font-weight: 400;
+}
 .radio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1976,7 +1987,6 @@ img {
   font-weight: 500;
 }
 .event__headline {
-  margin-left: 0px;
   margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1990,8 +2000,10 @@ img {
 }
 .event__headline-img {
   width: 497px;
+  grid-area: img;
 }
-.event__dateplace {
+.event__dateplace1,
+.event__dateplace2 {
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -2002,6 +2014,12 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 12px;
+}
+.event__dateplace1 {
+  grid-area: dateplaceone;
+}
+.event__dateplace2 {
+  grid-area: dateplacetwo;
 }
 .event__dateplace-liner {
   display: -webkit-box;
@@ -2056,12 +2074,6 @@ img {
   font-size: 18px;
   margin-top: 75px;
 }
-.event__program-point {
-  margin-bottom: 16px;
-}
-.event__program-point::marker {
-  color: #a51505;
-}
 .event__info {
   margin-left: 280px;
   width: 870px;
@@ -2071,18 +2083,14 @@ img {
   margin-top: 50px;
 }
 .event__reserving {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 335px;
-  margin-bottom: 70px;
+  display: grid;
+  justify-self: center;
+  margin-bottom: 150px;
+  grid-template-columns: 455px 880px;
+  grid-template-rows: 700px 251px;
+  grid-template-areas: "num tables" "tickets cost";
 }
 .event__reserving-numbers {
-  margin-left: 280px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2091,6 +2099,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 12px;
+  grid-area: num;
 }
 .event__reserving-check--red {
   color: #a51505;
@@ -2099,8 +2108,10 @@ img {
   color: gray;
 }
 .event__tables {
+  grid-area: tables;
   width: 780px;
   height: 400px;
+  margin-left: 100px;
   display: grid;
   gap: 50px;
   grid-template-columns: repeat(5, 1fr);
@@ -2165,7 +2176,115 @@ img {
   grid-area: stage;
 }
 .event__tickets {
-  margin-left: 280px;
+  width: 405px;
+  grid-area: tickets;
+}
+.event__tickets-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.event__totalCost {
+  justify-self: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+.event__total-amount {
+  font-weight: 600;
+  font-size: 18px;
+}
+.event__cost {
+  width: 355px;
+  margin-left: 525px;
+  grid-area: cost;
+}
+.event__cost-title {
+  font-size: 18px;
+  font-weight: 700;
+  justify-self: end;
+}
+.event__cost-red {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 15px;
+  justify-self: end;
+}
+.event__cost-red::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #a51505;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.event__cost-black {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 40px;
+  justify-self: end;
+}
+.event__cost-black::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #1f1E1E;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.event__cost-circles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-self: end;
+}
+.event__cost-blackcircle1 {
+  margin-right: -10px;
+}
+.event__cost-blackcircle1::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #1f1E1E;
+  vertical-align: middle;
+  margin-left: 25px;
+}
+.event__cost-redcircle {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.event__cost-redcircle::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid #bc3324;
+  vertical-align: middle;
+  margin-right: 15px;
+}
+.event__cost-graycircle {
+  position: relative;
+  font-size: 14px;
+  margin-bottom: 50px;
+  justify-self: end;
+}
+.event__cost-graycircle::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #BFBFBF;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 .swiper-slide {
   height: auto;
@@ -2292,6 +2411,24 @@ img {
   .event-card__title {
     margin: 0 0 10px;
   }
+  .event__href {
+    margin-left: 145px;
+    margin-top: 75px;
+  }
+  .event__program-list {
+    margin-left: 145px;
+  }
+  .event__info-title,
+  .event__program-title {
+    margin-left: 145px;
+  }
+  .event__info {
+    margin-left: 145px;
+    width: 600px;
+  }
+  .event__music-list {
+    margin-left: 125px;
+  }
   .swiper--3s .swiper-slide {
     width: calc(33.3333% + 13.3333px);
     min-width: 320px;
@@ -2362,6 +2499,21 @@ img {
     height: 67px;
     margin-top: 135px;
   }
+  .event__headline-img {
+    width: 426px;
+  }
+  .event__reserving-numbers {
+    margin-left: 90px;
+  }
+  .event__tables {
+    margin-left: 45px;
+  }
+  .event__tickets {
+    margin-left: 90px;
+  }
+  .event__cost {
+    margin-left: 320px;
+  }
   .swiper--3s .swiper-slide {
     width: calc(33.3333% + 10px);
     min-width: 310px;
@@ -2372,6 +2524,30 @@ img {
   }
   .swiper-footer {
     width: 300px;
+  }
+}
+@media (max-width: 1239px) {
+  .event__reserving {
+    justify-self: center;
+    grid-template-columns: 455px 880px;
+    grid-template-rows: 700px 245px 1fr;
+    grid-template-areas: "tables ." "num cost" ". tickets";
+  }
+  .event__reserving-numbers {
+    margin-left: 230px;
+  }
+  .event__tables {
+    margin-left: 245px;
+  }
+  .event__tickets {
+    margin-left: 275px;
+    margin-top: 95px;
+  }
+  .event__tickets-title {
+    font-size: 16px;
+  }
+  .event__cost-title {
+    font-size: 16px;
   }
 }
 @media (max-width: 1169px) {
@@ -2515,6 +2691,33 @@ img {
     font-size: 14px;
     line-height: 19px;
   }
+  .event__href {
+    font-size: 14px;
+  }
+  .event__title {
+    font-size: 40px;
+  }
+  .event__headline-img {
+    width: 245px;
+  }
+}
+@media (max-width: 992px) {
+  .event__href {
+    margin-left: 25px;
+  }
+  .event__program-list {
+    margin-left: 25px;
+  }
+  .event__info-title,
+  .event__program-title {
+    margin-left: 25px;
+  }
+  .event__info {
+    margin-left: 25px;
+  }
+  .event__music-list {
+    margin-left: 25px;
+  }
 }
 @media (max-width: 767px) and (max-width: 767px) {
   .table__head {
@@ -2637,6 +2840,16 @@ img {
     margin-top: 0;
     margin-left: 467px;
   }
+  .event__dateplace1,
+  .event__dateplace2 {
+    gap: 7px;
+  }
+  .event__dateplace-info--16px {
+    font-size: 14px;
+  }
+  .event__dateplace-info {
+    font-size: 18px;
+  }
   .swiper--3s .swiper-slide {
     width: calc(33.3333% + 6.6666px);
     min-width: 300px;
@@ -2656,11 +2869,36 @@ img {
   .event-card__title {
     width: calc 6.66667333%;
   }
+  .event__href {
+    display: none;
+  }
+  .event__title {
+    font-size: 20px;
+  }
+  .event__headline {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 140px 160px;
+    grid-template-areas: "img ." "dateplaceone dateplacetwo";
+    margin-left: 15px;
+  }
+  .event__headline-img {
+    margin-left: 90px;
+  }
+  .event__info-title,
+  .event__program-title {
+    font-size: 16px;
+  }
+  .event__info {
+    margin-left: 20px;
+    font-size: 14px;
+    width: 300px;
+  }
+  .event__music-list {
+    font-size: 14px;
+  }
 }
 @media (max-width: 599px) {
-  .listing__blog-card {
-    width: 280px;
-  }
   .page-footer {
     padding-bottom: 50px;
   }
@@ -2681,6 +2919,30 @@ img {
   }
   .doit__word3 {
     margin-right: -14vw;
+  }
+}
+@media (max-width: 499px) {
+  .pp__title {
+    margin-right: 25px;
+    width: auto;
+    font-size: 14px;
+  }
+  .form__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+@media (max-width: 399px) {
+  .page-header__logo {
+    margin-left: -20px;
+  }
+}
+@media (max-width: 319px) {
+  .listing__blog-card {
+    width: 280px;
   }
   .blog-card__info {
     padding-left: 0;
@@ -2709,24 +2971,16 @@ img {
     margin-top: 0;
     margin-left: 213px;
   }
-}
-@media (max-width: 499px) {
-  .pp__title {
-    margin-right: 25px;
-    width: auto;
+  .event__dateplace-info--16px {
+    font-size: 12px;
+  }
+  .event__info {
+    margin-left: 20px;
     font-size: 14px;
+    width: 270px;
   }
-  .form__buttons {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px;
-  }
-}
-@media (max-width: 399px) {
-  .page-header__logo {
-    margin-left: -20px;
+  .event__music-list {
+    margin-left: 0px;
   }
 }
 @media (max-width: 128px) {
