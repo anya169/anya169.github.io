@@ -1,4 +1,20 @@
 .listing{
+   &__title{
+      @media @bw1340 {
+         width: 604px;
+         height: 62px;
+      }
+      @media @bw768 {
+         width: 566px;
+         height: 52px;
+         font-size: 24px;
+      }
+      @media @bw600 {
+         width: 280px;
+         height: 42px;
+         font-size: 16px;
+      }
+   }
    &__events-list{
       box-sizing: border-box;
       display: flex;
@@ -87,5 +103,25 @@
       left: 293px;
       margin-left: 293px;
       margin-bottom: 60px;
+      @media @bw1340 {
+         width: 829px;
+         margin-left: 40px;
+      }
+      @media @bw1020 {
+         width: 600px;
+         margin-left: 40px;
+      }
+      @media @bw768 {
+         width: 707px;
+         margin-left: 30px;
+      }
+      @media @bw600 {
+         width: 300px;
+         margin-left: 40px;
+      }
+      @media @bw320 {
+         width: 280px;
+         margin-left: 20px;
+      }
    }
 }

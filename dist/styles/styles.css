@@ -305,10 +305,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  justify-self: center;
   width: 624px;
   height: 128px;
-  padding-left: 648px;
-  padding-right: 648px;
 }
 .section--events {
   margin-top: 50px;
@@ -2451,8 +2450,16 @@ img {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .listing__title {
+    width: 604px;
+    height: 62px;
+  }
   .listing__blog-card {
     width: 708px;
+  }
+  .listing__table {
+    width: 829px;
+    margin-left: 40px;
   }
   .page-footer {
     padding-left: 30px;
@@ -2527,6 +2534,28 @@ img {
   }
 }
 @media (max-width: 1239px) {
+  .contacts__items--row {
+    gap: 0px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contacts__items--row .contacts-item--column:nth-of-type(1) {
+    -webkit-transform: translateX(130px);
+        -ms-transform: translateX(130px);
+            transform: translateX(130px);
+  }
+  .contacts__items--row .contacts-item--column:nth-of-type(2) {
+    margin-top: 318px;
+  }
+  .contacts__items--row .contacts-item--column:nth-of-type(3) {
+    -webkit-transform: translateX(-130px);
+        -ms-transform: translateX(-130px);
+            transform: translateX(-130px);
+  }
+  .contacts-item__text {
+    width: 280px;
+  }
   .event__reserving {
     justify-self: center;
     grid-template-columns: 455px 880px;
@@ -2577,6 +2606,10 @@ img {
   }
   .listing__event-card {
     width: calc(50% - 15px);
+  }
+  .listing__table {
+    width: 600px;
+    margin-left: 40px;
   }
   .center-block__logo::before {
     padding-top: 22.5%;
@@ -2732,12 +2765,21 @@ img {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .listing__title {
+    width: 566px;
+    height: 52px;
+    font-size: 24px;
+  }
   .listing__blog-list {
     padding-left: 20px;
     padding-right: 20px;
   }
   .listing__blog-card {
     width: 527px;
+  }
+  .listing__table {
+    width: 707px;
+    margin-left: 30px;
   }
   .page-header {
     height: 70px;
@@ -2899,6 +2941,15 @@ img {
   }
 }
 @media (max-width: 599px) {
+  .listing__title {
+    width: 280px;
+    height: 42px;
+    font-size: 16px;
+  }
+  .listing__table {
+    width: 300px;
+    margin-left: 40px;
+  }
   .page-footer {
     padding-bottom: 50px;
   }
@@ -2943,6 +2994,10 @@ img {
 @media (max-width: 319px) {
   .listing__blog-card {
     width: 280px;
+  }
+  .listing__table {
+    width: 280px;
+    margin-left: 20px;
   }
   .blog-card__info {
     padding-left: 0;
