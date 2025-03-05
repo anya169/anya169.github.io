@@ -1,20 +1,40 @@
 .table{
-   margin-left: 293px;
+   margin-top: 50px;
+   justify-self: center;
    border-collapse: collapse;
    width: 1334px;
    color: @black;
+   @media @bw1340 {
+      width: 1250px;
+   }
+   @media @bw1240 {
+      width: 708px;
+   }
    @media @bw768 {
       display: block;
       margin: 0 -20px;
-      width: calc(100%+40px);
-   &__head{
+      width: calc(100% + 40px);
+   &__thead{
+      margin-top: 130px;
       @media @bw768 {
-         display: block;
+         display: flex;
       }
    }   
    }
-
-   &__thead-th{
+   &__thead-tr,
+   &__tfooter-tr{
+      @media @bw768 {
+         display: flex;
+         width: 100%;
+      }
+   }
+   &__tfooter-tr{
+      @media @lw768 {
+         display: none;
+      }
+   }
+   &__thead-th,
+   &__tfooter-th{
       border: 1px solid #BFBFBF;
       border-top: none;
       height: 85px;
@@ -36,32 +56,30 @@
       &:first-child {
          border-left: none;
          padding-left: 0;
-      }
-      &--btm{
-         border: 1px solid #BFBFBF;
-         border-bottom: none;
-         height: 60px;
-         &:last-child {
-            border-right: none;
-            padding-right: 0;
-         }
-         &:first-child {
-            border-left: none;
-            padding-left: 0;
+         @media @bw768 {
+            display: none;
          }
       }
    }
+   &__tfooter-th{
+      @media @bw768 {
+         border-bottom: none;
+         color: #6C6C6C;
+         font-weight: 300;
+      }
+   }
    &__tr{
-      height: 45.9px;
+      min-height: 45.9px;
       &:nth-child(2n-1){
          background-color: fade(@black, 3%);
       }
          @media @bw768 {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
          }
-
+      
    }
-   &__td,
+   
    &__tbody-th{
       box-sizing: border-box;
       line-height: 1.3;
@@ -73,9 +91,17 @@
    }
    }
    &__tbody-th{
+      box-sizing: border-box;
       font-weight: 400;
       padding-left: 0;
       text-align: left;
+      @media @bw768 {
+         display: block;
+         width: 100%;
+         min-height: 50px;
+         height: auto;
+         text-align: center;
+      }
       
    }
    &__td{
@@ -89,6 +115,18 @@
       &:last-child {
          border-right: none;
          padding-right: 0;
+      }
+      @media @bw768 {
+         display: block;
+         width: 33.333333333%;
+         height: auto;
+      }
+   }
+   &__tbody,
+   &__thead,
+   &__tfooter{
+      @media @bw768 {
+         display: block;
       }
    }
 }
