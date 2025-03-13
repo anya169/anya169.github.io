@@ -1195,6 +1195,45 @@ img {
 .field__date-input--w110 {
   width: 110px;
 }
+.field__date-input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 0 5px;
+  font-size: 16px;
+  line-height: 1.375;
+  text-align: center;
+  pointer-events: none;
+}
+.field__date-input--year {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 0;
+}
+.field__date-picker {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  opacity: 0;
+  cursor: pointer;
+}
+.field label.error,
+.field span.error {
+  display: block;
+  margin: 5px 0 0;
+}
 .table {
   margin-top: 50px;
   justify-self: center;
@@ -1806,6 +1845,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
   gap: 50px;
 }
 .contacts__container--info {
@@ -1821,6 +1863,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 67px;
+  grid-area: items;
 }
 .contacts__items--row {
   -webkit-box-orient: horizontal;
@@ -1831,6 +1874,7 @@ img {
 }
 .contacts__map {
   width: 800px;
+  grid-area: map;
 }
 .contacts-item {
   display: -webkit-box;
@@ -3353,6 +3397,9 @@ button.swiper-pagination-bullet {
     padding-left: 30px;
     padding-right: 30px;
   }
+  .contacts__items {
+    gap: 52px;
+  }
   .contacts__items--row {
     gap: 29px;
   }
@@ -3435,7 +3482,7 @@ button.swiper-pagination-bullet {
             transform: translateX(-130px);
   }
   .contacts-item__text {
-    width: 280px;
+    width: auto;
   }
   .event__reserving {
     justify-self: center;
@@ -3706,7 +3753,7 @@ button.swiper-pagination-bullet {
     width: 527px;
   }
   .listing__title {
-    margin-top: -140px;
+    margin-top: 50px;
     margin-bottom: 60px;
   }
   .listing__table {
@@ -3927,6 +3974,66 @@ button.swiper-pagination-bullet {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .contacts__container {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "map" "items";
+    padding: 0;
+    margin: 0;
+    max-width: 500px;
+  }
+  .contacts__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0px;
+    width: 500px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .contacts__map {
+    width: 500px;
+  }
+  .contacts-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    gap: 30px;
+  }
+  .contacts-item__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts-item__title {
+    font-size: 18px;
+  }
+  .contacts-item__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .blog-card__info {
     padding-left: 0;
     padding-right: 0;
@@ -4098,6 +4205,9 @@ button.swiper-pagination-bullet {
   .page-header__logo {
     margin-left: -20px;
   }
+  .field__date-input {
+    font-size: 14px;
+  }
 }
 @media (max-width: 319px) {
   .section-title {
@@ -4122,6 +4232,54 @@ button.swiper-pagination-bullet {
   }
   .aboutus {
     font-size: 18px;
+  }
+  .contacts__container {
+    grid-template-rows: 1fr 2fr;
+    max-width: 280px;
+    gap: 0px;
+  }
+  .contacts__items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    width: 280px;
+  }
+  .contacts__map {
+    width: 280px;
+    height: 190px;
+  }
+  .contacts-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -ms-flex-item-align: unset;
+        align-self: unset;
+    gap: 10px;
+  }
+  .contacts-item__wrap-icon {
+    width: 65px;
+    height: 65px;
+  }
+  .contacts-item__info {
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+  }
+  .contacts-item__title {
+    font-size: 14px;
+  }
+  .contacts-item__text {
+    font-size: 14px;
+    text-align: unset;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
   }
   .blog-card__info {
     padding-left: 0;
