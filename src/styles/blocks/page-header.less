@@ -61,7 +61,7 @@
          height: 100vh;
          background-color: fade(@gray, 98%);
          flex-direction: column;
-         transform: translateX(-100%);
+         transform: translateX(0);
          transition: transform 0.4s;
       }
    }
@@ -140,8 +140,10 @@
          color: @white;
       }
       &:hover {
-      background-color: @black;
-      color: @white;
+         @media (hover: hover) {
+            background-color: @black;
+            color: @white;
+        }
       }
       @media @bw1020{
          margin-right: -8px;
@@ -165,6 +167,7 @@
     &__nav-toggle{
       display: none;
       @media @bw1020 {
+         display: none;
          display: block;
          position: relative;
          border: none;
@@ -183,11 +186,16 @@
          height: 2px;
          border-radius: 2px;
          background-color: @black;
+         transform-origin: 50% 50%;
+         transition: transform 0.4s, box-shadow 0.4s;
       }
       &::before{
+         transform: translate(0px, 6px) rotate(45deg);
+         box-shadow: none;
          top: 13px;
       }
       &::after{
+         transform: translate(0px, -6px) rotate(-45deg);
          bottom: 13px;
       }
     }

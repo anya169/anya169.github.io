@@ -809,10 +809,6 @@ img {
   background-color: #1f1E1E;
   color: #ffffff;
 }
-.page-header_btn:hover {
-  background-color: #1f1E1E;
-  color: #ffffff;
-}
 .page-header__user-icon {
   display: none;
 }
@@ -828,11 +824,26 @@ img {
   height: 2px;
   border-radius: 2px;
   background-color: #1f1E1E;
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  transition: -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s;
+  transition: transform 0.4s, box-shadow 0.4s, -webkit-transform 0.4s, -webkit-box-shadow 0.4s;
 }
 .page-header__nav-toggle::before {
+  -webkit-transform: translate(0px, 6px) rotate(45deg);
+      -ms-transform: translate(0px, 6px) rotate(45deg);
+          transform: translate(0px, 6px) rotate(45deg);
+  -webkit-box-shadow: none;
+          box-shadow: none;
   top: 13px;
 }
 .page-header__nav-toggle::after {
+  -webkit-transform: translate(0px, -6px) rotate(-45deg);
+      -ms-transform: translate(0px, -6px) rotate(-45deg);
+          transform: translate(0px, -6px) rotate(-45deg);
   bottom: 13px;
 }
 .page-header__nav-toggle-line {
@@ -3556,9 +3567,9 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-            transform: translateX(-100%);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
     -webkit-transition: -webkit-transform 0.4s;
     transition: -webkit-transform 0.4s;
     transition: transform 0.4s;
@@ -3597,6 +3608,7 @@ button.swiper-pagination-bullet {
     display: block;
   }
   .page-header__nav-toggle {
+    display: none;
     display: block;
     position: relative;
     border: none;
@@ -4331,6 +4343,10 @@ button.swiper-pagination-bullet {
   }
 }
 @media (hover: hover) {
+  .page-header_btn:hover {
+    background-color: #1f1E1E;
+    color: #ffffff;
+  }
   .page-footer__block-link:hover {
     color: #bc3324;
   }
