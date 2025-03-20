@@ -40,7 +40,6 @@
    }
 
    &__sticky-close {
-      position: sticky;
       top: 0;
       align-self: flex-end;
       width: 0;
@@ -51,10 +50,13 @@
       display: flex;
       outline: none;
       border: none;
+      padding: 0;
+      width: 60px;
+      height: 60px;
       top: -30px;
       right: -30px;
       background-color: @black;
-      border-radius: 50%;
+      border-radius: 50px;
       transition: background-color 0.2s;
       @media @bw768 {
         width: 36px;

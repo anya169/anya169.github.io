@@ -71,10 +71,10 @@
     <section class="section">
       <p class="section__center">Я ХОЧУ:</p>
       <div class="section__bottom">
-        <button type="button" class="section__value-1 btn btn--red " id="js-eventOpenBtn">
+        <button type="button" class="btn section__value-1" id="js-eventOpenBtn">
           Провести мероприятие
         </button>
-        <p class="btn section__value-2">Стать арендатором</p>
+        <button type="button" class="btn section__value-2">Стать арендатором</button>
       </div>
     </section>
     <h1 class="center-block__title section-title">О НАС</h1>
@@ -318,7 +318,7 @@
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
         <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
-          <svg class="x-btn__icon" width="12" height="12">
+          <svg class="x-btn__icon" width="60" height="60">
             <use xlink:href="assets/icons/symbols.svg#x"></use>
           </svg>
         </button>
@@ -416,7 +416,7 @@
       </label>
       <div class="form__buttons">
         <p class="form_button btn--pp btn">Отправить</p>
-        <button type="button" class="form__close-btn js-ppCloseBtn">
+        <button type="button" class="form_button btn--pp btn--close js-ppCloseBtn">
           Закрыть
         </button>
       </div>
@@ -427,8 +427,17 @@
 
 
   <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+  <script src="scripts/jquery-3.6.0.min.js"></script>
+  <script src="scripts/jquery.selectric.min.js"></script>
+  <script src="scripts/jquery.mask.js"></script>
+  <script src="scripts/air-datepicker.js"></script>
+
   <script src="scripts/swiper.min.js"></script>
-  <script defer src="scripts/main-min.js"></script>
+  <script src="scripts/jquery.validate.min.js"></script>
+
+
+  <script src="scripts/jquery.validate-init.js"></script>
+  <script defer src="scripts/main.js"></script>
 </body>
 
 </html>
