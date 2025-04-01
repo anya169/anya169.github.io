@@ -29,5 +29,9 @@
       "build": "gulp build",
       "serve": "gulp serve",
       "start": "gulp start"
+   },
+   "dependencies": {
+      "gulp-inject": "^5.0.5",
+      "swiper": "^11.2.5"
    }
 }
