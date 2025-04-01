@@ -287,7 +287,7 @@
      title: "TAGREE digital"
      });
    }
-   document.addEventListener('DOMContentLoaded', function() {
+ /*  document.addEventListener('DOMContentLoaded', function() {
     const checkbox = document.getElementById("checkbox10");
     const rectangle = document.getElementById("Rectangle10");
     const ellipse1 = document.getElementById("Ellipse10-1");
@@ -687,7 +687,7 @@
         totalCostElement.innerHTML = `Сумма <span style="margin-left: 35px;"></span> ${total} ₽`;
       });
     });
- 
+ */
 
    const jsSelectric = $(".js-selectric");
    if (jsSelectric.length) {
